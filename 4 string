@@ -1,0 +1,20 @@
+Given a string, count the number of vowels (a, e, i, o, u) in it. The comparison should be case-insensitive.
+EXAmple :"Hello World"
+
+
+CODE:
+def count_vowels(s):
+    vowels = "aeiou"
+    count = 0
+
+    for char in s.lower():
+        if char in vowels:
+            count += 1
+
+    return count
+
+
+# Example usage
+text = "Hello World"
+result = count_vowels(text)
+print(result)
