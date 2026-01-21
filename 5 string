@@ -1,0 +1,22 @@
+Question:
+Check whether a given string is a palindrome. A palindrome reads the same forward and backward. Ignore spaces, punctuation, and case.
+
+Example :"A man a plan a canal Panama"
+Output:
+
+True
+
+CODE:
+def is_palindrome(s):
+    cleaned = ""
+
+    for char in s:
+        if char.isalnum():
+            cleaned += char.lower()
+
+    return cleaned == cleaned[::-1]
+
+
+# Example usage
+text = "A man a plan a canal Panama"
+print(is_palindrome(text))
