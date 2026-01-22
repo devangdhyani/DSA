@@ -1,0 +1,49 @@
+# Create a string
+text = "Welcome to Python programming"
+Write a Python program that performs the following operations on a string array (list of strings):
+
+Create a string array containing at least 5 names.
+
+Code:
+# Step 1: Create a string array
+names = ["Alice", "Bob", "Andrew", "Eve", "Oscar"]
+
+# Step 2: Display all strings
+print("Original String Array:")
+for name in names:
+    print(name)
+
+# Step 3: Find longest and shortest string
+longest = max(names, key=len)
+shortest = min(names, key=len)
+
+print("\nLongest string:", longest)
+print("Shortest string:", shortest)
+
+# Step 4: Convert all strings to uppercase
+upper_names = [name.upper() for name in names]
+print("\nStrings in Uppercase:")
+print(upper_names)
+
+# Step 5: Sort the array alphabetically
+names.sort()
+print("\nSorted String Array:")
+print(names)
+
+# Step 6: Count strings starting with a vowel
+vowels = ('A', 'E', 'I', 'O', 'U')
+vowel_count = 0
+
+for name in names:
+    if name.upper().startswith(vowels):
+        vowel_count += 1
+
+print("\nNumber of strings starting with a vowel:", vowel_count)
+
+# Step 7: Search for a string
+search_name = input("\nEnter a name to search: ")
+
+if search_name in names:
+    print(search_name, "is found in the array.")
+else:
+    print(search_name, "is not found in the array.")
