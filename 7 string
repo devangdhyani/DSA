@@ -1,0 +1,57 @@
+Write a Python program to perform the following operations on a string array (list of strings):
+
+Accept N strings from the user and store them in a string array.
+
+Display all the strings entered by the user.
+
+Remove duplicate strings from the array.
+
+Display all strings that have length greater than 5
+
+Code:::
+# Step 1: Accept number of strings
+n = int(input("Enter number of strings: "))
+strings = []
+
+for i in range(n):
+    value = input(f"Enter string {i + 1}: ")
+    strings.append(value)
+
+# Step 2: Display all strings
+print("\nOriginal String Array:")
+print(strings)
+
+# Step 3: Remove duplicate strings
+unique_strings = []
+for s in strings:
+    if s not in unique_strings:
+        unique_strings.append(s)
+
+print("\nString Array After Removing Duplicates:")
+print(unique_strings)
+
+# Step 4: Display strings with length greater than 5
+print("\nStrings with length greater than 5:")
+for s in unique_strings:
+    if len(s) > 5:
+        print(s)
+
+# Step 5: Count strings
+total_strings = len(unique_strings)
+count_a = 0
+
+for s in unique_strings:
+    if 'a' in s.lower():
+        count_a += 1
+
+print("\nTotal number of strings:", total_strings)
+print("Strings containing letter 'a':", count_a)
+
+# Step 6: Reverse each string
+reversed_strings = []
+for s in unique_strings:
+    reversed_strings.append(s[::-1])
+
+# Step 7: Display final array
+print("\nFinal Modified String Array (Reversed Strings):")
+print(reversed_strings)
