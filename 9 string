@@ -1,0 +1,8 @@
+Given a string s, return True if it is a palindrome, considering only alphanumeric characters and ignoring case.
+
+
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s = s.lower()
+        s = ''.join(c for c in s if c.isalnum())
+        return s == s[::-1]
